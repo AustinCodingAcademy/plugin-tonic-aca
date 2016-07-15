@@ -1,3 +1,5 @@
+var jsdom = require("jsdom").jsdom;
+var window = jsdom().defaultView;
 
 module.exports = {
     book: {
@@ -11,10 +13,17 @@ module.exports = {
         tonic: {
             process: function(block) {
                 var readOnly = Boolean(block.kwargs.readOnly);
+                var nodeVersion = '';
+                var pre = window.document.createElement('pre');
+                if (block.kwargs.nodeVersion) {
+                  pre['data-node-version'] = block.kwargs.nodeVersion;
+                }
                 var className = 'pg-tonic';
                 if (readOnly) className += ' readonly';
 
-                return '<pre class="' + className + '">' + block.body + '</pre>';
+                pre.textContent = block.body;
+                pre.className += className;
+                return pre.outerHTML;
             }
         }
     }

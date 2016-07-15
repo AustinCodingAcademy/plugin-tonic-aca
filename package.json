@@ -1,18 +1,21 @@
 {
-    "name": "gitbook-plugin-tonic",
-    "description": "Embed tonic notebook into your book",
-    "main": "index.js",
-    "version": "1.0.0",
-    "engines": {
-        "gitbook": ">=2.0.0"
-    },
-    "homepage": "https://github.com/GitbookIO/plugin-tonic",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/GitbookIO/plugin-tonic.git"
-    },
-    "license": "Apache-2.0",
-    "bugs": {
-        "url": "https://github.com/GitbookIO/plugin-tonic/issues"
-    }
+  "name": "gitbook-plugin-tonic",
+  "description": "Embed tonic notebook into your book",
+  "main": "index.js",
+  "version": "1.0.0",
+  "engines": {
+    "gitbook": ">=2.0.0"
+  },
+  "homepage": "https://github.com/GitbookIO/plugin-tonic",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GitbookIO/plugin-tonic.git"
+  },
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/GitbookIO/plugin-tonic/issues"
+  },
+  "dependencies": {
+    "jsdom": "^9.4.1"
+  }
 }
