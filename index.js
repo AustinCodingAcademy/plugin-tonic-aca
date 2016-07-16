@@ -13,7 +13,6 @@ module.exports = {
         tonic: {
             process: function(block) {
                 var readOnly = Boolean(block.kwargs.readOnly);
-                var nodeVersion = '';
                 var pre = window.document.createElement('pre');
                 if (block.kwargs.nodeVersion) {
                   pre['data-node-version'] = block.kwargs.nodeVersion;
