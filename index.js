@@ -1,5 +1,6 @@
 var jsdom = require("jsdom").jsdom;
 var window = jsdom().defaultView;
+var he = require('he');
 
 module.exports = {
     book: {
@@ -20,7 +21,7 @@ module.exports = {
                 var className = 'pg-tonic';
                 if (readOnly) className += ' readonly';
 
-                pre.textContent = block.body;
+                pre.textContent = he.decode(block.body).replace(/\\/g, '');
                 pre.className += className;
                 return pre.outerHTML;
             }
